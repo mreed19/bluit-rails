@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20160719190225) do
 
   create_table "categories", force: :cascade do |t|
-    t.string "name",            limit: 20
+    t.string "name",            limit: 20,   null: false
     t.string "title",           limit: 100
     t.string "description",     limit: 500
     t.text   "sidebar",         limit: 5120
