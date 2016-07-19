@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160718180109) do
+ActiveRecord::Schema.define(version: 20160719190225) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name",            limit: 20
+    t.string "title",           limit: 100
+    t.string "description",     limit: 500
+    t.text   "sidebar",         limit: 5120
+    t.text   "submission_text", limit: 1024
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title",      limit: 255
