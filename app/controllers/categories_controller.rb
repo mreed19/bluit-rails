@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-
   def show
     @category = Category.find(params[:id])
   end
@@ -24,7 +23,8 @@ class CategoriesController < ApplicationController
   end
 
   private
+
   def category_params
-    params.require(:category).permit(:name, :title, :description, :submission_text)
+    params.require(:category).permit(:name, :title, :description, :sidebar, :submission_text)
   end
 end
